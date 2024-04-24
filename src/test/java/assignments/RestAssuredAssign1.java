@@ -22,6 +22,7 @@ public class RestAssuredAssign1 {
     public static void main(String[] args) {
 
 
+        // Sends a GET Request to the url
         Response response = RestAssured.get("https://reqres.in/api/users/3");
         response.prettyPrint();
 

@@ -1,6 +1,7 @@
 package baseUrls;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 
@@ -13,6 +14,7 @@ public class BookerBaseUrl {
 
         spec = new RequestSpecBuilder()
                 .setBaseUri("https://restful-booker.herokuapp.com")
+                .setContentType(ContentType.JSON)
                 .build();
 
 

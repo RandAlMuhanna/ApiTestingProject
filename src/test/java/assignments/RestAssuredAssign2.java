@@ -37,6 +37,7 @@ public class RestAssuredAssign2 {
        Response response = given().get(url);
        response.prettyPrint();
 
+       // Do assertions
        // HTTP Status Code should be 200
         response
                 .then()
