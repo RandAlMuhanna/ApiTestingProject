@@ -9,11 +9,12 @@ public class UserPetstorePojo {
     private String email;
     private String password;
     private String phone;
+    private int userStatus;
 
     public UserPetstorePojo() {
     }
 
-    public UserPetstorePojo(Integer id, String username, String firstName, String lastName, String email, String password, String phone) {
+    public UserPetstorePojo(Integer id, String username, String firstName, String lastName, String email, String password, String phone, int userStatus) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
@@ -21,6 +22,7 @@ public class UserPetstorePojo {
         this.email = email;
         this.password = password;
         this.phone = phone;
+        this.userStatus = userStatus;
     }
 
     public Integer getId() {
@@ -79,6 +81,15 @@ public class UserPetstorePojo {
         this.phone = phone;
     }
 
+    public int getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(int userStatus) {
+        this.userStatus = userStatus;
+
+    }
+
     @Override
     public String toString() {
         return "PetStorePojo{" +
@@ -89,6 +100,7 @@ public class UserPetstorePojo {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
+                ", userStatus=" + userStatus +
                 '}';
     }
 }

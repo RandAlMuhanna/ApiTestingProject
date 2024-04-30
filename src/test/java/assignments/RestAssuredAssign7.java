@@ -22,7 +22,7 @@ Write an automation test that will create a 'user' using the "https://petstore.s
 
         // Create a 'user'
         UserPetstorePojo pojoData = new UserPetstorePojo(1, "RandMuh", "Rand", "AlMuhanna"
-                , "Rand@gmail.com", "123445", "05500000");
+                , "Rand@gmail.com", "123445", "05500000", 0);
         System.out.println("pojoData = " + pojoData);
 
         // Get response

@@ -6,10 +6,12 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 
 public class BookerBaseUrl {
+    // We avoid repetitive tasks when sending requests with the RequestSpecification object.
+    // For example: repetitive tasks such as base URL and headers.
 
-    protected RequestSpecification spec ;
+    protected RequestSpecification spec;//This is null in this line, setUp() method should run before using this.
 
-    @BeforeMethod
+    @BeforeMethod //Runs before each @Test
     public void setUp(){
 
         spec = new RequestSpecBuilder()
@@ -17,6 +19,7 @@ public class BookerBaseUrl {
                 .setContentType(ContentType.JSON)
                 .build();
 
-
     }
+
+
 }
