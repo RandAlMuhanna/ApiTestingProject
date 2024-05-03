@@ -46,7 +46,7 @@ public class C23_ObjectMapperPostMap extends JsonPlaceHolderBaseUrl {
                 "title": "Tidy your room",
                 "completed": false
                 }
-                """; //We wil use this String Json to convert it to Pojo object
+                """; //We will use this String Json to convert it to Pojo object
 
         Map expectedData = new ObjectMapper().readValue(strJson, Map.class);//This readValue method works with two parameters. First one is String formatted Json, second one is the data type you want to convert the json to.
         System.out.println("expectedData = " + expectedData);
